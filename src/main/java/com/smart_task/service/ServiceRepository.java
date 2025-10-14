@@ -6,4 +6,5 @@ import java.util.List;
 public interface ServiceRepository<Req, Res>  {
     Res register(Req entity);
     List<Res> getAll();
+    Res getById(Long id);
 }
