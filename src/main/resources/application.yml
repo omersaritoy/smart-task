@@ -2,6 +2,11 @@ spring:
   application:
     name: Smart-Task
 
+  security:
+    user:
+      name: sa
+      password: 12345
+
   datasource:
     url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver

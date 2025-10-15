@@ -7,4 +7,6 @@ public interface ServiceRepository<Req, Res>  {
     Res register(Req entity);
     List<Res> getAll();
     Res getById(Long id);
+    Res update(Long id, Req entity);
+
 }

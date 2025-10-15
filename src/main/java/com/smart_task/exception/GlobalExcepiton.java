@@ -25,4 +25,17 @@ public class GlobalExcepiton {
         );
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
     }
+    @ExceptionHandler(UserAlreadyExist.class)
+    public ResponseEntity<ErrorResponse> handleUserAlreadyExistException(UserAlreadyExist ex, HttpServletRequest request
+    ) {
+        ErrorResponse error = new ErrorResponse(
+                LocalDateTime.now(),
+                HttpStatus.CONFLICT.value(),
+                HttpStatus.CONFLICT.getReasonPhrase(),
+                ex.getMessage(),
+                request.getRequestURI()
+
+        );
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(error);
+    }
 }

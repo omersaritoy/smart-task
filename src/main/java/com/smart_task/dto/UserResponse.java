@@ -1,6 +1,7 @@
 package com.smart_task.dto;
 
 
+import com.smart_task.model.Role;
 import com.smart_task.model.User;
 
 import java.util.Date;
@@ -12,6 +13,7 @@ public record UserResponse(
         String username,
         String email,
         String password,
+        Role role,
         Date createdAt,
         Date updatedAt
 ) {
@@ -23,6 +25,7 @@ public record UserResponse(
                 entity.getUsername(),
                 entity.getEmail(),
                 entity.getPassword(),
+                entity.getRole(),
                 entity.getCreatedAt(),
                 entity.getUpdatedAt()
         );
