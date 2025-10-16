@@ -27,3 +27,7 @@ spring:
       path: /h2-console
       settings:
         web-allow-others: true
+
+  jwt:
+    secret: cdca5752a76e20f2dc0686ed13e7527b
+    expiration: 3600000
